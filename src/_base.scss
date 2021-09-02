@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap");
+
+$background-primary: #3c4858;
+$black-primary: #061017;
+$white-primary: #f2f3f4;
+$brown-primary: #40302f;
+$gray-primary: #525d65;
+$gray-secondary: #2a313a;
+$orange-primary: #e48909;
+$orange-secondary: #ab2a08;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  background-color: $background-primary;
+}
