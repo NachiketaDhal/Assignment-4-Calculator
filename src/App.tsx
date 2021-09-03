@@ -19,8 +19,8 @@ const Main = styled.main`
   place-items: center;
   min-height: 100vh;
   div {
-    width: 30%;
-    height: 70vh;
+    /* width: 25%; */
+    /* height: 70vh; */
     background-color: #061017;
     border-radius: 0.5em;
   }
