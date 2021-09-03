@@ -14,7 +14,7 @@ const Calculator = () => {
     <Container>
       <section className="form-section">
         <form>
-          <input type="text" value={inputValue} />
+          <input type="text" value={inputValue} onChange={() => {}} />
         </form>
       </section>
       <section className="button-section">

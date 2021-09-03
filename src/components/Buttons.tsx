@@ -1,69 +1,75 @@
 import React, { Fragment } from "react";
-// import styled from "styled-components";
 
 import { useGlobalContext } from "../context/context";
 import "./_buttons.scss";
 
 const Buttons = () => {
-  const { handleNumberOpClick } = useGlobalContext();
+  const {
+    handleNumberOpClick,
+    handleEqualClick,
+    handleClearClick,
+    handleBackspaceClick,
+  } = useGlobalContext();
+
   return (
     <Fragment>
-      <button>C</button>
-      <button>AC</button>
-      <button className="button-blue">+/-</button>
-      <button className="button-blue" onClick={handleNumberOpClick}>
+      <button className="button-span-2" onClick={handleBackspaceClick}>
+        C
+      </button>
+      <button onClick={handleClearClick}>AC</button>
+      {/* <button className="button-blue">+/-</button> */}
+      <button className="button-blue" onClick={handleNumberOpClick} name="/">
         &divide;
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="7">
         7
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="8">
         8
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="9">
         9
       </button>
-      <button className="button-blue" onClick={handleNumberOpClick}>
+      <button className="button-blue" onClick={handleNumberOpClick} name="*">
         &times;
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="4">
         4
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="5">
         5
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="6">
         6
       </button>
-      <button className="button-blue" onClick={handleNumberOpClick}>
+      <button className="button-blue" onClick={handleNumberOpClick} name="-">
         -
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="1">
         1
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="2">
         2
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name="3">
         3
       </button>
-      <button className="button-blue" onClick={handleNumberOpClick}>
+      <button className="button-blue" onClick={handleNumberOpClick} name="+">
         +
       </button>
-      <button className="button-0 button-gray" onClick={handleNumberOpClick}>
+      <button
+        className="button-span-2 button-gray"
+        onClick={handleNumberOpClick}
+        name="0"
+      >
         0
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick}>
+      <button className="button-gray" onClick={handleNumberOpClick} name=".">
         .
       </button>
-      <button>=</button>
+      <button onClick={handleEqualClick}>=</button>
     </Fragment>
   );
 };
-
-// const Container = styled.div`
-//   button {
-//   }
-// `;
 
 export default Buttons;
