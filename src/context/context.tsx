@@ -21,8 +21,12 @@ const AppProvider = ({ children }: { children: any }) => {
   const [newState, dispatch] = useReducer(reducer, initialState);
 
   const handleNumberOpClick = (e: any) => {
+    e.preventDefault();
     let newInputValue = newState.inputValue || "";
-    if (newState.inputValue === "Error") {
+    if (
+      newState.inputValue === "Invalid" ||
+      newState.inputValue === "Infinity"
+    ) {
       dispatch({
         type: "ON_NUMBER_OP_CLICK",
         payload: e.target.name,
@@ -35,7 +39,11 @@ const AppProvider = ({ children }: { children: any }) => {
 
   const handleEqualClick = () => {
     try {
-      if (newState.inputValue === "Error" || !newState.inputValue) {
+      if (
+        newState.inputValue === "Invalid" ||
+        !newState.inputValue ||
+        newState.inputValue === "Infinity"
+      ) {
         dispatch({
           type: "ON_EQUAL_CLICK",
           payload: "",
@@ -49,7 +57,7 @@ const AppProvider = ({ children }: { children: any }) => {
     } catch (err) {
       dispatch({
         type: "ON_EQUAL_CLICK",
-        payload: "Error",
+        payload: "Invalid",
       });
     }
   };

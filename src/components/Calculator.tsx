@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { useGlobalContext } from "../context/context";
@@ -13,9 +13,12 @@ const Calculator = () => {
   return (
     <Container>
       <section className="form-section">
-        <form>
+        {/* <form>
           <input type="text" value={inputValue} onChange={() => {}} />
-        </form>
+        </form> */}
+        <div className="result" data-testid="result">
+          {inputValue}
+        </div>
       </section>
       <section className="button-section">
         <Buttons />
@@ -28,7 +31,7 @@ const Container = styled.section`
   color: #f2f3f4;
   height: inherit;
   .form-section {
-    form {
+    /* form {
       input {
         width: 100%;
         padding: 2em 1em;
@@ -40,6 +43,18 @@ const Container = styled.section`
         color: #f2f3f4;
         text-align: right;
       }
+    } */
+    .result {
+      width: 100%;
+      padding: 2em 1em;
+      font-size: 2em;
+      height: 5em;
+      border: none;
+      outline: none;
+      border-radius: 0.5em;
+      background-color: #061017;
+      color: #f2f3f4;
+      text-align: right;
     }
   }
   .button-section {

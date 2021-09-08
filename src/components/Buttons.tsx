@@ -13,61 +13,128 @@ const Buttons = () => {
 
   return (
     <Fragment>
-      <button className="button-span-2" onClick={handleBackspaceClick}>
+      <button className="button-span-2 sp-btn" onClick={handleBackspaceClick}>
         C
       </button>
-      <button onClick={handleClearClick}>AC</button>
+      <button className="sp-btn" onClick={handleClearClick}>
+        AC
+      </button>
       {/* <button className="button-blue">+/-</button> */}
-      <button className="button-blue" onClick={handleNumberOpClick} name="/">
+      <button
+        className="button-blue nm-btn"
+        onClick={handleNumberOpClick}
+        name="/"
+      >
         &divide;
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="7">
+      <button
+        className="button-gray"
+        data-testid="nm-btn-7"
+        onClick={handleNumberOpClick}
+        name="7"
+      >
         7
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="8">
+      <button
+        className="button-gray nm-btn"
+        onClick={handleNumberOpClick}
+        name="8"
+      >
         8
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="9">
+      <button
+        className="button-gray nm-btn"
+        onClick={handleNumberOpClick}
+        name="9"
+      >
         9
       </button>
-      <button className="button-blue" onClick={handleNumberOpClick} name="*">
+      <button
+        className="button-blue nm-btn"
+        onClick={handleNumberOpClick}
+        name="*"
+      >
         &times;
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="4">
+      <button
+        className="button-gray nm-btn"
+        onClick={handleNumberOpClick}
+        name="4"
+      >
         4
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="5">
+      <button
+        className="button-gray nm-btn"
+        onClick={handleNumberOpClick}
+        name="5"
+      >
         5
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="6">
+      <button
+        className="button-gray nm-btn"
+        onClick={handleNumberOpClick}
+        name="6"
+      >
         6
       </button>
-      <button className="button-blue" onClick={handleNumberOpClick} name="-">
+      <button
+        className="button-blue nm-btn"
+        onClick={handleNumberOpClick}
+        name="-"
+      >
         -
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="1">
+      <button
+        className="button-gray nm-btn"
+        onClick={handleNumberOpClick}
+        name="1"
+      >
         1
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="2">
+      <button
+        className="button-gray"
+        data-testid="nm-btn-2"
+        onClick={handleNumberOpClick}
+        name="2"
+      >
         2
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name="3">
+      <button
+        className="button-gray nm-btn"
+        onClick={handleNumberOpClick}
+        name="3"
+      >
         3
       </button>
-      <button className="button-blue" onClick={handleNumberOpClick} name="+">
+      <button
+        className="button-blue"
+        data-testid="nm-btn-sum"
+        onClick={handleNumberOpClick}
+        name="+"
+      >
         +
       </button>
       <button
-        className="button-span-2 button-gray"
+        className="button-span-2 button-gray nm-btn"
         onClick={handleNumberOpClick}
         name="0"
       >
         0
       </button>
-      <button className="button-gray" onClick={handleNumberOpClick} name=".">
+      <button
+        className="button-gray nm-btn"
+        onClick={handleNumberOpClick}
+        name="."
+      >
         .
       </button>
-      <button onClick={handleEqualClick}>=</button>
+      <button
+        className="nm-btn"
+        data-testid="eq-btn"
+        onClick={handleEqualClick}
+      >
+        =
+      </button>
     </Fragment>
   );
 };
