@@ -23,6 +23,7 @@ const Buttons = () => {
       <button
         className="button-blue nm-btn"
         onClick={handleNumberOpClick}
+        data-testid="nm-btn-div"
         name="/"
       >
         &divide;
@@ -51,6 +52,7 @@ const Buttons = () => {
       </button>
       <button
         className="button-blue nm-btn"
+        data-testid="nm-btn-mul"
         onClick={handleNumberOpClick}
         name="*"
       >
@@ -80,6 +82,7 @@ const Buttons = () => {
       <button
         className="button-blue nm-btn"
         onClick={handleNumberOpClick}
+        data-testid="nm-btn-sub"
         name="-"
       >
         -

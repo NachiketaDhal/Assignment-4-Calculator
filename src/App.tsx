@@ -2,15 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 import Calculator from "./components/Calculator";
+import { AppProvider } from "./context/context";
 import "./_app.scss";
 
 function App() {
   return (
-    <Main>
-      <div>
-        <Calculator />
-      </div>
-    </Main>
+    <AppProvider>
+      <Main>
+        <div>
+          <Calculator />
+        </div>
+      </Main>
+    </AppProvider>
   );
 }
 
